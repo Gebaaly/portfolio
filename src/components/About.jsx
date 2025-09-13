@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Badge } from "react-bootstrap";
 import useScrollAnimation from "../hooks/useScrollAnimation";
+import profileImg from "../assets/profile.png";
 
 const About = ({ darkMode }) => {
   const skills = [
@@ -20,7 +21,7 @@ const About = ({ darkMode }) => {
   const photoRef = useScrollAnimation();
   const contentRef = useScrollAnimation();
   const skillsRef = useScrollAnimation();
-
+  const profile = profileImg; 
   return (
     <section id="about" className="py-5">
       <Container>
@@ -28,7 +29,7 @@ const About = ({ darkMode }) => {
           <Col lg={8} className="text-center">
             <h2
               ref={titleRef}
-              className="display-5 fw-bold mb-3 fade-in-up gradient-text"
+              className="display-5 fw-bold mb-3  gradient-text"
             >
               About Me
             </h2>
@@ -55,7 +56,16 @@ const About = ({ darkMode }) => {
                   fontWeight: "bold",
                 }}
               >
-                AE
+                <img
+                  src={profile}
+                  alt="Profile"
+                  className="rounded-circle"
+                  style={{
+                    width: "290px",
+                    height: "290px",
+                    objectFit: "cover",
+                  }}
+                />
               </div>
             </div>
           </Col>
