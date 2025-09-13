@@ -7,6 +7,7 @@ import About from "./components/About";
 import Portfolio from "./components/Portfolio";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -29,6 +30,7 @@ function App() {
         <Portfolio darkMode={darkMode} />
         <Services darkMode={darkMode} />
         <Contact darkMode={darkMode} />
+        <Footer darkMode={darkMode} />
       </main>
     </div>
   );

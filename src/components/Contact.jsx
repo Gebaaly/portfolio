@@ -68,10 +68,7 @@ const Contact = ({ darkMode }) => {
       <Container>
         <Row className="justify-content-center mb-5">
           <Col lg={8} className="text-center">
-            <h2
-              ref={titleRef}
-              className="display-5 fw-bold mb-3 fade-in-up gradient-text"
-            >
+            <h2 ref={titleRef} className="display-5 fw-bold mb-3 gradient-text">
               Get In Touch
             </h2>
             <div

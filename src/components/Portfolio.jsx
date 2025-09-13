@@ -111,9 +111,9 @@ const Portfolio = ({ darkMode }) => {
           <Col lg={8} className="text-center">
             <h2
               ref={titleRef}
-              className="display-5 fw-bold mb-3 fade-in-up gradient-text"
+              className="display-5 fw-bold mb-3 gradient-text"
             >
-              My Portfolio
+              My Projects
             </h2>
             <div
               ref={titleRef}
