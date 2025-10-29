@@ -23,7 +23,7 @@ const Portfolio = ({ darkMode }) => {
         "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
       image: survey,
       technologies: ["React", "mongoose", "express", "nodejs"],
-      link: "https://github.com/Gebaaly/survey",
+      link: "https://github.com/Gebaaly/Salary-Survey",
     },
   ];
 
