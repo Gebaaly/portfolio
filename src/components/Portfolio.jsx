@@ -1,63 +1,38 @@
 import React, { useEffect, useRef } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import useScrollAnimation from "../hooks/useScrollAnimation";
-
+import chefaa from "../assets/chefaa.png";
+import survey from "../assets/survey.jpg";
 const Portfolio = ({ darkMode }) => {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
+      title: "E-Commerce chefaa clone",
       description:
-        "A modern e-commerce website built with React and Node.js, featuring user authentication, product management, and payment integration.",
-      image:
-        "https://via.placeholder.com/400x250/667eea/ffffff?text=E-Commerce+Platform",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+        "A fully functional E-commerce web application inspired by the real-life pharmacy platform Chefaa, designed to provide users with a smooth online shopping experience for healthcare products.",
+      image: chefaa,
+        
+      technologies: ["React", "php", "laravel","bootstrap"],
     },
     {
       id: 2,
-      title: "Task Management App",
+      title: "survey app",
       description:
         "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
       image:
-        "https://via.placeholder.com/400x250/764ba2/ffffff?text=Task+Management+App",
-      technologies: ["React", "Firebase", "Material-UI", "Socket.io"],
+        survey,
+      technologies: ["React", "mongoose", "express", "nodejs"],
     },
     {
       id: 3,
-      title: "Weather Dashboard",
+      title: "Weather App",
       description:
         "A beautiful weather application that displays current weather conditions and forecasts using OpenWeatherMap API.",
       image:
         "https://via.placeholder.com/400x250/667eea/ffffff?text=Weather+Dashboard",
       technologies: ["React", "OpenWeatherMap API", "Chart.js", "CSS3"],
     },
-    {
-      id: 4,
-      title: "Portfolio Website",
-      description:
-        "A responsive portfolio website showcasing projects and skills with modern design and smooth animations.",
-      image:
-        "https://via.placeholder.com/400x250/764ba2/ffffff?text=Portfolio+Website",
-      technologies: ["React", "Bootstrap", "CSS3", "JavaScript"],
-    },
-    {
-      id: 5,
-      title: "Social Media Dashboard",
-      description:
-        "A comprehensive dashboard for managing multiple social media accounts with analytics and scheduling features.",
-      image:
-        "https://via.placeholder.com/400x250/667eea/ffffff?text=Social+Media+Dashboard",
-      technologies: ["React", "Express.js", "PostgreSQL", "Chart.js"],
-    },
-    {
-      id: 6,
-      title: "Recipe Finder App",
-      description:
-        "A recipe discovery application that helps users find and save recipes based on available ingredients.",
-      image:
-        "https://via.placeholder.com/400x250/764ba2/ffffff?text=Recipe+Finder+App",
-      technologies: ["React", "Spoonacular API", "LocalStorage", "CSS3"],
-    },
+    
   ];
 
   const titleRef = useScrollAnimation();
