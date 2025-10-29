@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 import chefaa from "../assets/chefaa.png";
 import survey from "../assets/survey.jpg";
+import { Link } from "lucide-react";
 const Portfolio = ({ darkMode }) => {
   const projects = [
     {
@@ -13,25 +14,18 @@ const Portfolio = ({ darkMode }) => {
       image: chefaa,
         
       technologies: ["React", "php", "laravel","bootstrap"],
+      link: "https://github.com/Gebaaly/chefaa",
     },
     {
       id: 2,
       title: "survey app",
       description:
         "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image:
-        survey,
+      image:survey,
       technologies: ["React", "mongoose", "express", "nodejs"],
+      link: "https://github.com/Gebaaly/survey",
     },
-    {
-      id: 3,
-      title: "Weather App",
-      description:
-        "A beautiful weather application that displays current weather conditions and forecasts using OpenWeatherMap API.",
-      image:
-        "https://via.placeholder.com/400x250/667eea/ffffff?text=Weather+Dashboard",
-      technologies: ["React", "OpenWeatherMap API", "Chart.js", "CSS3"],
-    },
+    
     
   ];
 
@@ -133,7 +127,13 @@ const Portfolio = ({ darkMode }) => {
                     onClick={() => handleViewProject(project.id)}
                     className="mt-auto"
                   >
+                    <Link
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >
                     View Project
+                    </Link>
                   </Button>
                 </Card.Body>
               </Card>
