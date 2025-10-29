@@ -36,7 +36,7 @@ const Contact = ({ darkMode }) => {
   const socialLinks = [
     {
       name: "LinkedIn",
-      url: "https://linkedin.com/in/abdelrahmanelgebaly137",
+      url: "https://www.linkedin.com/in/abdelrahman-elgebaly1307",
       icon: "bi bi-linkedin",
       color: "#0077b5",
     },

@@ -26,7 +26,8 @@ const Home = ({ darkMode }) => {
     // Try to download the resume from Google Drive. We attempt to fetch the file
     // as a blob and force a download. If that fails (CORS/redirect), fall back
     // to opening the Drive direct-download URL in a new tab.
-    const RESUME_ID = "13LlYHiifWu_IRBXaag5s_0v2I67X5QQg";
+
+    const RESUME_ID = "1ppWtRZsAbeth_pw1cHYXdLgDoJ1WRbnv";
     const directLink = `https://drive.google.com/uc?export=download&id=${RESUME_ID}`;
 
     const downloadViaBlob = async () => {
