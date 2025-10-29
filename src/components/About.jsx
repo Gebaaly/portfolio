@@ -6,6 +6,7 @@ import profileImg from "../assets/profile.png";
 const About = ({ darkMode }) => {
   const skills = [
     "React",
+    "Next.js",
     "JavaScript",
     "TypeScript",
     "HTML5",
@@ -21,7 +22,7 @@ const About = ({ darkMode }) => {
   const photoRef = useScrollAnimation();
   const contentRef = useScrollAnimation();
   const skillsRef = useScrollAnimation();
-  const profile = profileImg; 
+  const profile = profileImg;
   return (
     <section id="about" className="py-5">
       <Container>

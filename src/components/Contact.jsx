@@ -53,9 +53,9 @@ const Contact = ({ darkMode }) => {
       color: "#1da1f2",
     },
     {
-      url: "https://mail.google.com/mail/?view=cm&fs=1&to=abdoalgebaly2003@gmail.com",
+      
       name: "Email",
-      // url: "mailto:abdoalgebaly2003@gmail.com",
+      url: "mailto:abdoalgebaly2003@gmail.com",
       icon: "bi bi-envelope",
       color: "#ea4335",
     },
