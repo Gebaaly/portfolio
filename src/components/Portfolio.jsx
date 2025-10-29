@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 import chefaa from "../assets/chefaa.png";
 import survey from "../assets/survey.jpg";
-import { Link } from "lucide-react";
+import { Eye } from "lucide-react";
 const Portfolio = ({ darkMode }) => {
   const projects = [
     {
@@ -12,8 +12,8 @@ const Portfolio = ({ darkMode }) => {
       description:
         "A fully functional E-commerce web application inspired by the real-life pharmacy platform Chefaa, designed to provide users with a smooth online shopping experience for healthcare products.",
       image: chefaa,
-        
-      technologies: ["React", "php", "laravel","bootstrap"],
+
+      technologies: ["React", "php", "laravel", "bootstrap"],
       link: "https://github.com/Gebaaly/chefaa",
     },
     {
@@ -21,12 +21,10 @@ const Portfolio = ({ darkMode }) => {
       title: "survey app",
       description:
         "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      image:survey,
+      image: survey,
       technologies: ["React", "mongoose", "express", "nodejs"],
       link: "https://github.com/Gebaaly/survey",
     },
-    
-    
   ];
 
   const titleRef = useScrollAnimation();
@@ -78,10 +76,7 @@ const Portfolio = ({ darkMode }) => {
       <Container>
         <Row className="justify-content-center mb-5">
           <Col lg={8} className="text-center">
-            <h2
-              ref={titleRef}
-              className="display-5 fw-bold mb-3 gradient-text"
-            >
+            <h2 ref={titleRef} className="display-5 fw-bold mb-3 gradient-text">
               My Projects
             </h2>
             <div
@@ -124,16 +119,14 @@ const Portfolio = ({ darkMode }) => {
                   </div>
                   <Button
                     variant="primary"
-                    onClick={() => handleViewProject(project.id)}
-                    className="mt-auto"
-                  >
-                    <Link
+                    as="a"
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    >
+                    className="mt-auto d-flex align-items-center justify-content-center"
+                  >
+                    <Eye className="me-2" />
                     View Project
-                    </Link>
                   </Button>
                 </Card.Body>
               </Card>
