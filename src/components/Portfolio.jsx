@@ -31,6 +31,9 @@ const Portfolio = ({ darkMode }) => {
   const cardsRef = useRef(null);
 
   useEffect(() => {
+    const currentRef = cardsRef.current;
+    if (!currentRef) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -47,26 +50,15 @@ const Portfolio = ({ darkMode }) => {
       {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
-      }
+      },
     );
 
-    if (cardsRef.current) {
-      observer.observe(cardsRef.current);
-    }
+    observer.observe(currentRef);
 
     return () => {
-      if (cardsRef.current) {
-        observer.unobserve(cardsRef.current);
-      }
+      observer.unobserve(currentRef);
     };
   }, []);
-
-  const handleViewProject = (projectId) => {
-    // Placeholder for project view functionality
-    alert(
-      `Viewing project ${projectId} - This would open the project details or live demo`
-    );
-  };
 
   return (
     <section
