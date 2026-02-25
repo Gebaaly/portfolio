@@ -88,6 +88,8 @@ const Services = ({ darkMode }) => {
   const servicesRef = useRef(null);
 
   useEffect(() => {
+    const currentServicesRef = servicesRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -104,16 +106,16 @@ const Services = ({ darkMode }) => {
       {
         threshold: 0.1,
         rootMargin: "0px 0px -50px 0px",
-      }
+      },
     );
 
-    if (servicesRef.current) {
-      observer.observe(servicesRef.current);
+    if (currentServicesRef) {
+      observer.observe(currentServicesRef);
     }
 
     return () => {
-      if (servicesRef.current) {
-        observer.unobserve(servicesRef.current);
+      if (currentServicesRef) {
+        observer.unobserve(currentServicesRef);
       }
     };
   }, []);
@@ -123,10 +125,7 @@ const Services = ({ darkMode }) => {
       <Container>
         <Row className="justify-content-center mb-5">
           <Col lg={8} className="text-center">
-            <h2
-              ref={titleRef}
-              className="display-5 fw-bold mb-3 gradient-text"
-            >
+            <h2 ref={titleRef} className="display-5 fw-bold mb-3 gradient-text">
               Services I Offer
             </h2>
             <div
