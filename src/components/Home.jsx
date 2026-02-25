@@ -27,9 +27,8 @@ const Home = ({ darkMode }) => {
     // as a blob and force a download. If that fails (CORS/redirect), fall back
     // to opening the Drive direct-download URL in a new tab.
 
-    const RESUME_ID = "1ppWtRZsAbeth_pw1cHYXdLgDoJ1WRbnv";
+    const RESUME_ID = "1pRYisV6aTcPHx9OHrnscrr61eDOqYI3p";
     const directLink = `https://drive.google.com/uc?export=download&id=${RESUME_ID}`;
-
     const downloadViaBlob = async () => {
       try {
         const res = await fetch(directLink);
