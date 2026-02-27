@@ -23,37 +23,10 @@ const Home = ({ darkMode }) => {
   }, [currentIndex, fullText]);
 
   const handleDownloadResume = () => {
-    // Try to download the resume from Google Drive. We attempt to fetch the file
-    // as a blob and force a download. If that fails (CORS/redirect), fall back
-    // to opening the Drive direct-download URL in a new tab.
-
-    const RESUME_ID = "1pRYisV6aTcPHx9OHrnscrr61eDOqYI3p";
-    const directLink = `https://drive.google.com/uc?export=download&id=${RESUME_ID}`;
-    const downloadViaBlob = async () => {
-      try {
-        const res = await fetch(directLink);
-        if (!res.ok) throw new Error("Network response was not ok");
-        const blob = await res.blob();
-        const url = window.URL.createObjectURL(blob);
-        const a = document.createElement("a");
-        a.href = url;
-        a.download = "Abdelrahman_Elgebaly_Resume.pdf";
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
-        window.URL.revokeObjectURL(url);
-        return true;
-      } catch (err) {
-        return false;
-      }
-    };
-
-    downloadViaBlob().then((ok) => {
-      if (!ok) {
-        // Fallback: open the direct link in a new tab/window
-        window.open(directLink, "_blank", "noopener");
-      }
-    });
+    // Open the resume directly in Google Drive
+    const resumeUrl =
+      "https://drive.google.com/file/d/14F65zEWDOzyXlWXOrAbfNE-pKTF6i3ow/view?usp=sharing";
+    window.open(resumeUrl, "_blank", "noopener");
   };
 
   return (
@@ -95,8 +68,7 @@ const Home = ({ darkMode }) => {
                   className="px-4 py-2 fw-semibold floating"
                   onClick={handleDownloadResume}
                 >
-                  <i className="bi bi-download me-2"></i>
-                  Download Resume
+                  Personal Resume
                 </Button>
               </div>
             </div>

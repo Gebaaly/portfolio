@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import useScrollAnimation from "../hooks/useScrollAnimation";
 import chefaa from "../assets/chefaa.png";
 import survey from "../assets/survey.jpg";
+import dashboard from "../assets/dashboard.webp";
 import { Eye } from "lucide-react";
 const Portfolio = ({ darkMode }) => {
   const projects = [
@@ -24,6 +25,14 @@ const Portfolio = ({ darkMode }) => {
       image: survey,
       technologies: ["React", "mongoose", "express", "nodejs"],
       link: "https://github.com/Gebaaly/Salary-Survey",
+    },
+    {
+      id: 3,
+      title: "E-commerce Admin Dashboard",
+      description:
+        " A scalable multilingual admin dashboard designed to manage international e-commerce operations, featuring dynamic content control, financial reporting, and region-based system architecture.",
+      image: dashboard,
+      technologies: ["React", "Next.js", "Tailwind CSS", ".NET"],
     },
   ];
 
@@ -109,17 +118,19 @@ const Portfolio = ({ darkMode }) => {
                       ))}
                     </div>
                   </div>
-                  <Button
-                    variant="primary"
-                    as="a"
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="mt-auto d-flex align-items-center justify-content-center"
-                  >
-                    <Eye className="me-2" />
-                    View Project
-                  </Button>
+                  {project.title !== "E-commerce Admin Dashboard" && (
+                    <Button
+                      variant="primary"
+                      as="a"
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-auto d-flex align-items-center justify-content-center"
+                    >
+                      <Eye className="me-2" />
+                      View Project
+                    </Button>
+                  )}
                 </Card.Body>
               </Card>
             </Col>
