@@ -74,11 +74,11 @@ const NavBar = ({ darkMode, setDarkMode }) => {
               About
             </Nav.Link>
             <Nav.Link
-              href="#projects"
+              href="#portfolio"
               className={darkMode ? "text-light" : ""}
               onClick={(e) => {
                 e.preventDefault();
-                scrollToSection("projects");
+                scrollToSection("portfolio");
               }}
             >
               Projects
